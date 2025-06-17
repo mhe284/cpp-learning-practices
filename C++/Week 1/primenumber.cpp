@@ -2,17 +2,17 @@
 #include <iostream>
 
 /* Week 1 Ex: Print prime numbers between 1 and 100 */
-
-bool isPrime(const int n) {
-
-    for (int i=2; i < n; i++) {
-        if (n % i == 0) {
-            return false;
+class Solution {
+    public: 
+    static bool isPrime(const int& n) {
+        for (int i=2; i < n; i++) {
+            if (n % i == 0) {
+                return false;
+            }
         }
+        return true;
     }
-
-    return true;
-}
+};
 
 int main() {
     constexpr int MAX_PRIME = 100;
@@ -26,7 +26,7 @@ int main() {
 
     while (aNum < MAX_PRIME) {
         //Check if it's a prime number
-        if (isPrime(aNum)) {
+        if (Solution::isPrime(aNum)) {
             std::cout << aNum << std::endl;
         }
         aNum++;
